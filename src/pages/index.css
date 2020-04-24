@@ -1,0 +1,40 @@
+body {
+  height: 100%;
+  background: radial-gradient(farthest-corner at 150px 150px, #1d1e1c 25%, #722a68 50%, #2a8098 70%, #16db93 90%);
+  animation: colorChange 20s infinite alternate;
+  background-attachment: fixed;
+}
+
+@keyframes colorChange {
+  from {
+    background-position: left top;
+    background-size: 150% 150%;
+  }
+  to {
+    background-position: right top;
+    background-size: 150% 150%;
+  }
+}
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  transform: translateZ(-7px) scale(8);
+}

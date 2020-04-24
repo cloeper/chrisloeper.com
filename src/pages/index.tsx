@@ -1,79 +1,54 @@
 import React from 'react';
 import styled from 'styled-components';
 import './reset.css';
+import './index.css';
 
-const PageContainer = styled.div`
-  height: 100vh;
-`;
-
-const GradientBackground = styled.div`
-  height: 100%;
-  background: radial-gradient(farthest-corner at 150px 150px, #1d1e1c 25%, #722a68 50%, #2a8098 70%, #16db93 90%);
-  position: relative;
-  pointer-events: all;
-  animation: colorChange 20s infinite alternate;
-
-  @keyframes colorChange {
-    from {
-      background-position: left top;
-      background-size: 150% 150%;
-    }
-    to {
-      background-position: right top;
-      background-size: 150% 150%;
-    }
-  }
-`;
-
-const GradientOverlay = styled.div`
-  height: 100%;
-  background: black;
-  opacity: 0.25;
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-`;
+import { Hero } from '../components/Hero';
 
 const ContentContainer = styled.div`
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
 `;
 
-const HeroHeaderContainer = styled.div`
-  height: 800px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+const MissionStatementContainer = styled.div`
+  width: 400px;
+  height: 2000px;
 `;
 
-const HeroText = styled.div`
-  h1 {
-    font-size: 128px;
-  }
+const NavContainer = styled.div`
+  position: absolute;
+  top: 600px;
+  display: flex;
+  flex-direction: column;
+`;
+
+const NavItem = styled.div`
+  width: 200px;
+  height: 75px;
+  background: blueviolet;
 `;
 
 const IndexPage = () => (
-  <PageContainer>
-    <GradientOverlay />
-    <GradientBackground>
+  <>
+    <div className="parallax">
+      <div className="parallax__layer parallax__layer--back">
+        <NavContainer>
+          <NavItem>Mission</NavItem>
+          <NavItem>Experience</NavItem>
+        </NavContainer>
+      </div>
       <ContentContainer>
-        <HeroHeaderContainer>
-          <HeroText>
-            <h1>Chris Loeper</h1>
-          </HeroText>
-        </HeroHeaderContainer>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
+        <Hero />
+        <MissionStatementContainer>
+          <p>Welcome to your new Gatsby site.</p>
+          <p>Now go build something great.</p>
+        </MissionStatementContainer>
       </ContentContainer>
-    </GradientBackground>
-  </PageContainer>
+    </div>
+  </>
 );
 
 export default IndexPage;
