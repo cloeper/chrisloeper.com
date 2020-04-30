@@ -1,7 +1,9 @@
 body {
-  height: 100%;
+  min-width: 1920px;
+  min-height: 1080px;
+  height: 100vh;
   background: radial-gradient(farthest-corner at 150px 150px, #1d1e1c 25%, #722a68 50%, #2a8098 70%, #16db93 90%);
-  animation: colorChange 20s infinite alternate;
+  animation: colorChange 15s infinite alternate;
   background-attachment: fixed;
 }
 
@@ -19,6 +21,7 @@ body {
 .parallax {
   perspective: 1px;
   height: 100vh;
+  min-height: 1080px;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -32,9 +35,125 @@ body {
 }
 
 .parallax__layer--base {
+  z-index: 99;
   transform: translateZ(0);
 }
 
-.parallax__layer--back {
-  transform: translateZ(-7px) scale(8);
+.parallax__layer--menu {
+  transform: translateZ(-6px) scale(7);
+  z-index: 100;
+}
+
+.parallax__layer--one {
+  transform-origin: 0 0;
+  transform: translateZ(-1px) scale(3);
+  z-index: 1;
+  display: flex;
+}
+
+.parallax__layer--two {
+  transform-origin: 0 0;
+  transform: translateZ(-2px) scale(4.5);
+  z-index: 2;
+  display: flex;
+}
+
+.parallax__layer--three {
+  transform-origin: 0 0;
+  transform: translateZ(-3px) scale(6);
+  z-index: 3;
+  display: flex;
+}
+
+.parallax__layer--four {
+  transform-origin: 0 0;
+  transform: translateZ(-4px) scale(7.5);
+  z-index: 4;
+  display: flex;
+}
+
+.layerOneHexLeft {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  top: 217px;
+}
+
+.layerOneHexMiddle {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  top: 217px;
+  left: 113px;
+}
+
+.layerOneHexRight {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  top: 217px;
+  left: 330px;
+}
+
+.layerTwoHexLeft {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  top: 157px;
+}
+
+.layerTwoHexMiddle {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  top: 185px;
+  left: 59px;
+}
+
+.layerTwoHexRight {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  top: 185px;
+  left: 171px;
+}
+
+.layerThreeHexLeft {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  top: 155px;
+  left: -107px;
+}
+
+.layerThreeHexMiddle {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  top: 155px;
+  left: 111px;
+}
+
+.layerThreeHexRight {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  top: 127px;
+  left: 65px;
+}
+
+.layerFourHexLeft {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  top: 137px;
+  left: -33px;
+}
+
+.layerFourHexRight {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  top: 110px;
+  left: 28px;
 }
