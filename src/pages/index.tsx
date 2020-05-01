@@ -4,8 +4,8 @@ import './reset.css';
 import './index.css';
 
 import { Hero } from '../components/Hero';
+import { Hex, createHex } from '../components/Hex';
 import goldenHex from '../images/goldenhex.png';
-import goldAbstract from '../images/goldAbstract.png';
 
 const ContentContainer = styled.div`
   display: flex;
@@ -32,15 +32,7 @@ const NavItem = styled.div`
   background: blueviolet;
 `;
 
-const HexBackground = styled.div`
-  position: absolute;
-  width: 300px;
-  height: 100vh;
-  background-image: url(${goldenHex});
-  background-repeat: repeat;
-  background-size: 20%;
-  background-attachment: fixed;
-`;
+const LOneRHex = React.createElement(createHex, { top: 217, left: 0 });
 
 const IndexPage = () => (
   <>
@@ -81,9 +73,9 @@ const IndexPage = () => (
         </NavContainer>
       </div>
       <div className="parallax__layer parallax__layer--one">
-        <img src={goldenHex} alt="hex" className="layerOneHexLeft" />
-        <img src={goldenHex} alt="hex" className="layerOneHexMiddle" />
-        <img src={goldenHex} alt="hex" className="layerOneHexRight" />
+        {Hex.LayerOne.Left}
+        {Hex.LayerOne.Middle}
+        {Hex.LayerOne.Right}
       </div>
       <div className="parallax__layer parallax__layer--two">
         <img src={goldenHex} alt="hex" className="layerTwoHexLeft" />
@@ -104,3 +96,7 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
+
+// <img src={goldenHex} alt="hex" className="layerOneHexLeft" />
+// <img src={goldenHex} alt="hex" className="layerOneHexMiddle" />
+// <img src={goldenHex} alt="hex" className="layerOneHexRight" />
