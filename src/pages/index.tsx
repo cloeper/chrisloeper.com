@@ -4,7 +4,7 @@ import './reset.css';
 import './index.css';
 
 import { Hero } from '../components/Hero';
-import { Hex, createHex } from '../components/Hex';
+import { Hex } from '../components/Hex';
 import goldenHex from '../images/goldenhex.png';
 
 const ContentContainer = styled.div`
@@ -31,8 +31,6 @@ const NavItem = styled.div`
   height: 75px;
   background: blueviolet;
 `;
-
-const LOneRHex = React.createElement(createHex, { top: 217, left: 0 });
 
 const IndexPage = () => (
   <>
@@ -73,30 +71,26 @@ const IndexPage = () => (
         </NavContainer>
       </div>
       <div className="parallax__layer parallax__layer--one">
-        {Hex.LayerOne.Left}
-        {Hex.LayerOne.Middle}
-        {Hex.LayerOne.Right}
+        <Hex.LayerOne.Left />
+        <Hex.LayerOne.Middle />
+        <Hex.LayerOne.Right />
       </div>
       <div className="parallax__layer parallax__layer--two">
-        <img src={goldenHex} alt="hex" className="layerTwoHexLeft" />
-        <img src={goldenHex} alt="hex" className="layerTwoHexMiddle" />
-        <img src={goldenHex} alt="hex" className="layerTwoHexRight" />
+        <Hex.LayerTwo.Left />
+        <Hex.LayerTwo.Middle />
+        <Hex.LayerTwo.Right />
       </div>
       <div className="parallax__layer parallax__layer--three">
-        <img src={goldenHex} alt="hex" className="layerThreeHexLeft" />
-        <img src={goldenHex} alt="hex" className="layerThreeHexMiddle" />
-        <img src={goldenHex} alt="hex" className="layerThreeHexRight" />
+        <Hex.LayerThree.Left />
+        <Hex.LayerThree.Middle />
+        <Hex.LayerThree.Right />
       </div>
       <div className="parallax__layer parallax__layer--four">
-        <img src={goldenHex} alt="hex" className="layerFourHexLeft" />
-        <img src={goldenHex} alt="hex" className="layerFourHexRight" />
+        <Hex.LayerFour.Left />
+        <Hex.LayerFour.Right />
       </div>
     </div>
   </>
 );
 
 export default IndexPage;
-
-// <img src={goldenHex} alt="hex" className="layerOneHexLeft" />
-// <img src={goldenHex} alt="hex" className="layerOneHexMiddle" />
-// <img src={goldenHex} alt="hex" className="layerOneHexRight" />

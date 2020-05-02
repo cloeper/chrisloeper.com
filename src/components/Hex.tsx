@@ -1,6 +1,7 @@
 import React from 'react';
 import goldenHex from '../images/goldenhex.png';
 import styled from 'styled-components';
+import { transformObjectKeys } from '../utils/objectUtils';
 
 interface IHexPositions {
   layerOne: IHexLayer;
@@ -43,21 +44,37 @@ const hexPositions: IHexPositions = {
   },
 };
 
+const HexImage = styled.img`
+  position: relative;
+  height: 100px;
+  width: 100px;
+`;
+
+function createHex(pos: IPosition) {
+  return <HexImage style={{ top: pos.top, left: pos.left }} src={goldenHex} alt="hex" />;
+}
+
 export const Hex = {
   LayerOne: {
-    Left: createHex(hexPositions.layerOne.left),
-    Middle: createHex(hexPositions.layerOne.middle),
-    Right: createHex(hexPositions.layerOne.right),
+    Left: () => createHex(hexPositions.layerOne.left),
+    Middle: () => createHex(hexPositions.layerOne.middle),
+    Right: () => createHex(hexPositions.layerOne.right),
+  },
+  LayerTwo: {
+    Left: () => createHex(hexPositions.layerTwo.left),
+    Middle: () => createHex(hexPositions.layerTwo.middle),
+    Right: () => createHex(hexPositions.layerTwo.right),
+  },
+  LayerThree: {
+    Left: () => createHex(hexPositions.layerThree.left),
+    Middle: () => createHex(hexPositions.layerThree.middle),
+    Right: () => createHex(hexPositions.layerThree.right),
+  },
+  LayerFour: {
+    Left: () => createHex(hexPositions.layerFour.left),
+    Middle: () => createHex(hexPositions.layerFour.middle),
+    Right: () => createHex(hexPositions.layerFour.right),
   },
 };
 
-export function createHex(pos: IPosition) {
-  const HexImage = styled.img`
-    position: relative;
-    height: 100px;
-    width: 100px;
-    top: ${pos.top}px;
-    left: ${pos.left}px;
-  `;
-  return <HexImage src={goldenHex} alt="hex" />;
-}
+//[a-zA-Z0-9-?!@#$%^&*()+ ]+(?![^:]*:)
