@@ -1,7 +1,6 @@
 import React from 'react';
-import goldenHex from '../images/goldenhex.png';
+import * as goldenHex from '../images/goldenhex.png';
 import styled from 'styled-components';
-import { transformObjectKeys } from '../utils/objectUtils';
 
 interface IHexPositions {
   layerOne: IHexLayer;
@@ -25,17 +24,17 @@ const hexPositions: IHexPositions = {
   layerOne: {
     left: { top: 217, left: 0 },
     middle: { top: 217, left: 113 },
-    right: { top: 217, left: 330 },
+    right: { top: 217, left: 225 },
   },
   layerTwo: {
     left: { top: 157, left: 0 },
     middle: { top: 185, left: 59 },
-    right: { top: 185, left: 171 },
+    right: { top: 158, left: 223 },
   },
   layerThree: {
     left: { top: 155, left: -107 },
     middle: { top: 155, left: 111 },
-    right: { top: 127, left: 65 },
+    right: { top: 155, left: 117 },
   },
   layerFour: {
     left: { top: 137, left: -33 },
@@ -76,5 +75,3 @@ export const Hex = {
     Right: () => createHex(hexPositions.layerFour.right),
   },
 };
-
-//[a-zA-Z0-9-?!@#$%^&*()+ ]+(?![^:]*:)
