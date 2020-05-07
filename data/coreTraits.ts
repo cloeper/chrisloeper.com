@@ -1,0 +1,16 @@
+export const coreTraits: string[] = [
+  'Empathetic',
+  'Kind',
+  'Open-minded',
+  'Honest',
+  'Assertive',
+  'Good Listener',
+  'Adaptable',
+  'Self Motivated',
+  'Forward Thinking',
+  'Social',
+  'Big Picture Focused',
+  'Data Driven',
+  'Results Driven',
+  'Quick Study',
+];
