@@ -1,6 +1,8 @@
 import React from 'react';
-import * as goldenHex from '../images/goldenhex.png';
+import goldenHex from '../images/goldenhex.png';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
+import { useStaticQuery, graphql } from 'gatsby';
 
 interface IHexPositions {
   layerOne: IHexLayer;
@@ -50,7 +52,30 @@ const HexImage = styled.img`
 `;
 
 function createHex(pos: IPosition) {
-  return <HexImage style={{ top: pos.top, left: pos.left }} src={goldenHex} alt="hex" />;
+  const imgData = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "goldenhex.png" }) {
+        childImageSharp {
+          fluid {
+            base64
+            sizes
+            src
+            srcSet
+          }
+        }
+      }
+    }
+  `);
+  const style = {
+    position: 'relative',
+    height: 100,
+    width: 100,
+    top: pos.top,
+    left: pos.left,
+  };
+
+  return <Img fluid={imgData.file.childImageSharp.fluid} style={style} alt="hex" />;
+  // return <HexImage style={} src={goldenHex} alt="hex" />;
 }
 
 export const Hex = {
