@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const ParallaxContainer = styled.div`
   perspective: 1px;
   height: 100vh;
-  min-height: 1080px;
+  min-height: 900px;
   overflow-x: hidden;
   overflow-y: auto;
 `;
