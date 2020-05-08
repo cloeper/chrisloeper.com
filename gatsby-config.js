@@ -19,9 +19,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: 'chrisloeper.com'
-      }
-    }
+        bucketName: 'chrisloeper.com',
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
