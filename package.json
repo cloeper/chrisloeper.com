@@ -48,7 +48,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "deploy": "deploy: gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id E1RW4C804F5B5K --paths \"/*\"",
+    "deploy": "gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id E1RW4C804F5B5K --paths \"/*\"",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
