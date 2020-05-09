@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ParallaxContainer = styled.div`
   perspective: 1px;
   height: 100vh;
-  min-height: 900px;
+
   overflow-x: hidden;
   overflow-y: auto;
 `;
@@ -27,28 +27,28 @@ export const ParallaxLayerMenu = styled(ParallaxLayer)`
 `;
 
 export const ParallaxLayerOne = styled(ParallaxLayer)`
-  transform-origin: 0 0;
+  transform-origin: top left;
   transform: translateZ(-1px) scale(3);
   z-index: 1;
   display: flex;
 `;
 
 export const ParallaxLayerTwo = styled(ParallaxLayer)`
-  transform-origin: 0 0;
+  transform-origin: top left;
   transform: translateZ(-2px) scale(4.5);
   z-index: 2;
   display: flex;
 `;
 
 export const ParallaxLayerThree = styled(ParallaxLayer)`
-  transform-origin: 0 0;
+  transform-origin: top left;
   transform: translateZ(-3px) scale(6);
   z-index: 3;
   display: flex;
 `;
 
 export const ParallaxLayerFour = styled(ParallaxLayer)`
-  transform-origin: 0 0;
+  transform-origin: top left;
   transform: translateZ(-4px) scale(7.5);
   z-index: 4;
   display: flex;

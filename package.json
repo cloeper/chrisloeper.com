@@ -53,7 +53,7 @@
     "develop": "gatsby develop",
     "preload-fonts": "gatsby-preload-fonts",
     "build": "gatsby build",
-    "deploy": "gatsby-plugin-s3 deploy --yes && aws cloudfront create-invalidation --distribution-id E10JJASUOD5IFH --paths \"/*\"",
+    "deploy": "gatsby-plugin-s3 deploy --yes",
     "clean": "gatsby clean",
     "clean:node": "rm -rf node_modules",
     "type-check": "tsc --noEmit",
