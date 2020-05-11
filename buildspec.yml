@@ -11,9 +11,9 @@ phases:
   build:
     commands:
       - 'yarn run build'
-  post_build:
-    # commands:
-    # - 'yarn run deploy'
+  # post_build:
+  # commands:
+  # - 'yarn run deploy'
 
 artifacts:
   base-directory: public
