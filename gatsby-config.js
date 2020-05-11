@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `chrisloeper.com`,
@@ -9,6 +11,7 @@ module.exports = {
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-preload-fonts`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -19,9 +22,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: 'chrisloeper.com'
-      }
-    }
+        bucketName: process.env.BUCKET_NAME,
+        acl: null,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

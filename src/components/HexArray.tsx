@@ -11,19 +11,16 @@ export const HexArray: React.FC = () => {
         <Hex.LayerOne.Middle />
         <Hex.LayerOne.Right />
       </ParallaxLayerOne>
-
       <ParallaxLayerTwo>
         <Hex.LayerTwo.Left />
         <Hex.LayerTwo.Middle />
         <Hex.LayerTwo.Right />
       </ParallaxLayerTwo>
-
       <ParallaxLayerThree>
         <Hex.LayerThree.Left />
         <Hex.LayerThree.Middle />
         <Hex.LayerThree.Right />
       </ParallaxLayerThree>
-
       <ParallaxLayerFour>
         <Hex.LayerFour.Left />
         <Hex.LayerFour.Right />
