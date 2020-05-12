@@ -1,3 +1,5 @@
+import { skills, ISkill } from './skills';
+
 export interface IJobData {
   company: string;
   startDate: IEmploymentDate;
@@ -8,6 +10,7 @@ export interface IJobData {
     state: string;
   };
   workData: string[];
+  skillsUsed?: ISkill[];
 }
 
 interface IEmploymentDate {
@@ -29,6 +32,7 @@ export const jobHistory: IJobData[] = [
       'Lead a team to create a greenfield application that incorporated a headless CMS to generate static content.',
       'Sadly, a large portion of the company was laid off due to COVID-19.',
     ],
+    skillsUsed: [skills.react, skills.redux, skills.styledComponents, skills.aws, skills.gatsby, skills.reactTestingLib],
   },
   {
     company: 'DealSite',
