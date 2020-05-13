@@ -1,19 +1,3 @@
 body {
-  min-width: 1900px;
-  min-height: 800px;
   height: 100vh;
-  background: radial-gradient(farthest-corner at 150px 150px, #1d1e1c 25%, #722a68 50%, #2a8098 70%, #16db93 90%);
-  animation: colorChange 15s infinite alternate;
-  background-attachment: fixed;
-}
-
-@keyframes colorChange {
-  from {
-    background-position: left top;
-    background-size: 150% 150%;
-  }
-  to {
-    background-position: right top;
-    background-size: 150% 150%;
-  }
 }
