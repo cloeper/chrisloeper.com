@@ -1,6 +1,7 @@
 import React from 'react';
 import { coreTraits } from '../data/coreTraits';
 import styled from 'styled-components';
+import { WordTileTable } from './WordTileTable';
 
 const TraitContainer = styled.div`
   grid-area: traits;
@@ -36,7 +37,6 @@ const TraitList = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
-  border: 1px solid gold;
 `;
 
 const TraitListItem = styled.div`
@@ -55,20 +55,6 @@ const TraitListItemBullet = styled.div`
   margin-left: 10px;
 `;
 
-export const CoreTraits: React.FC = () => {
-  return (
-    <TraitContainer>
-      <TraitHeader>
-        <h1>Traits</h1>
-      </TraitHeader>
-      <TraitList>
-        {coreTraits.map(trait => (
-          <TraitListItem>
-            <TraitListItemBullet />
-            {trait}
-          </TraitListItem>
-        ))}
-      </TraitList>
-    </TraitContainer>
-  );
-};
+export const CoreTraits: React.FC = () => (
+  <WordTileTable headerText="Traits" wordArray={coreTraits} gridArea="traits" itemWidth={250} gradientAngle={220} headerAlignment="start" />
+);

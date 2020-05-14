@@ -6,8 +6,8 @@ enum CareerFriends {
 
 enum TechnicalCategory {
   Cloud = 'Cloud Computing',
-  Frontend = 'Frontend',
-  Backend = 'Backend',
+  Frontend = 'Front-end',
+  Backend = 'Back-end',
   FullStack = 'Full Stack',
 }
 
@@ -16,6 +16,7 @@ export interface ISkill {
   yearsOfXp: number;
   friendStatus: CareerFriends;
   category: TechnicalCategory;
+  display?: boolean;
 }
 
 interface ISkillList {
@@ -154,12 +155,14 @@ export const skills: ISkillList = {
     yearsOfXp: 2,
     friendStatus: CareerFriends.OldFriends,
     category: TechnicalCategory.Backend,
+    display: false,
   },
   rails: {
     name: 'Ruby on Rails',
     yearsOfXp: 2,
     friendStatus: CareerFriends.OldFriends,
     category: TechnicalCategory.FullStack,
+    display: false,
   },
   cSharp: {
     name: 'C# / .net',
@@ -172,6 +175,7 @@ export const skills: ISkillList = {
     yearsOfXp: 1,
     friendStatus: CareerFriends.OldFriends,
     category: TechnicalCategory.FullStack,
+    display: false,
   },
   perl: {
     name: 'Perl',
