@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { jobHistory, IJobData } from '../data/jobHistory';
-import { ISkill } from '../data/skills';
 import { Divider } from './Divider';
 
 const JobHistoryContainer = styled.div`
@@ -128,24 +127,24 @@ export const JobHistory: React.FC = () => {
         <JobHistoryHeader>Job History</JobHistoryHeader>
         <Divider.Horizontal marginTop={-13} lineThickness={2} />
       </JobHistoryHeaderContainer>
-      {jobHistory.map((job: IJobData) => {
+      {jobHistory.map((job, index) => {
         return (
-          <JobData>
+          <JobData key={index}>
             <JobDataBackground />
             <CompanyName>
               <h1>{job.company}</h1>
             </CompanyName>
             <Divider.Horizontal />
             <EmploymentDates>
-              {job.startDate.month && job.startDate.month} {job.startDate.year} - {job.endDate.month && job.endDate.month} {job.startDate.year}
+              {job.startDate.month && job.startDate.month} {job.startDate.year} - {job.endDate.month && job.endDate.month} {job.endDate.year}
             </EmploymentDates>
             <Location>
               {job.location.city}, {job.location.state}
             </Location>
             <Position>{job.title}</Position>
             <WorkDataContainer>
-              {job.workData.map((workDataPoint: string) => (
-                <WorkData>
+              {job.workData.map((workDataPoint: string, index) => (
+                <WorkData key={index}>
                   <WorkDataItemBullet />
                   <WorkDataItem>{workDataPoint}</WorkDataItem>
                 </WorkData>
@@ -155,8 +154,8 @@ export const JobHistory: React.FC = () => {
               <SkillsHeaderContainer>
                 <h3>Skills Used:</h3>
               </SkillsHeaderContainer>
-              {job.skillsUsed.map((skill: ISkill) => (
-                <div>{skill.name}</div>
+              {job.skillsUsed.map((skill, index) => (
+                <div key={index}>{skill.name}</div>
               ))}
             </SkillsContainer>
           </JobData>

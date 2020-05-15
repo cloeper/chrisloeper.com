@@ -74,7 +74,7 @@ export const WordTileTable: React.FC<IWordTileTable> = props => {
       <Divider.Horizontal />
       <WordTileTableList>
         {props.wordArray.map((value, index) => (
-          <WordTileTableListItem width={props.itemWidth} gradientAngle={props.gradientAngle}>
+          <WordTileTableListItem width={props.itemWidth} gradientAngle={props.gradientAngle} key={index}>
             <WordTileTableListItemBullet />
             {value}
           </WordTileTableListItem>

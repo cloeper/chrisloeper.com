@@ -124,8 +124,8 @@ export const jobHistory: IJobData[] = [
   {
     company: 'American Virtual Academy',
     startDate: { month: 'August', year: 2010 },
-    endDate: { month: 'December', year: 2011 },
-    title: '',
+    endDate: { month: 'January', year: 2011 },
+    title: 'Front-end Engineer',
     location: {
       city: 'Chandler',
       state: 'AZ',
@@ -192,7 +192,7 @@ export const jobHistory: IJobData[] = [
     company: 'Intrepid Data Management',
     startDate: { month: 'September', year: 2004 },
     endDate: { month: 'June', year: 2006 },
-    title: '',
+    title: 'Software Developer',
     location: {
       city: 'Portland',
       state: 'OR',

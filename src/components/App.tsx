@@ -6,6 +6,7 @@ import { Values } from './Values';
 import { CoreTraits } from './CoreTraits';
 import { JobHistory } from './JobHistory';
 import { ProfessionalExperience } from './ProfessionalExperience';
+import { Skills } from './Skills';
 
 const GradientBackground = styled.div`
   background: radial-gradient(farthest-corner at 150px 150px, #1d1e1c 25%, #722a68 50%, #2a8098 70%, #16db93 90%);
@@ -26,15 +27,15 @@ const GradientBackground = styled.div`
 
 const ContentContainer = styled(GradientBackground)`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto auto 50px auto 50px auto;
   grid-template-areas:
-    'about about about about about'
-    '. profXP values values .'
-    '. . . . .'
-    '. traits . . .'
-    '. . . . .'
-    'jobHistory jobHistory jobHistory jobHistory jobHistory';
+    'about about about about about about'
+    '. profXP profXP values values .'
+    '. . . . . .'
+    '. traits skills skills skills .'
+    '. . . . . .'
+    'jobHistory jobHistory jobHistory jobHistory jobHistory jobHistory';
   column-gap: 60px;
   row-gap: 10px;
   justify-items: stretch;
@@ -47,6 +48,7 @@ export const App = () => (
     <ProfessionalExperience />
     <Values />
     <CoreTraits />
+    <Skills />
     <JobHistory />
   </ContentContainer>
 );

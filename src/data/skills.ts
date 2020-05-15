@@ -1,10 +1,10 @@
-enum CareerFriends {
+export enum CareerFriends {
   BestFriends = 'Best Friends',
   OldFriends = 'Old Friends',
   GettingToKnow = 'Getting to Know',
 }
 
-enum TechnicalCategory {
+export enum TechnicalCategory {
   Cloud = 'Cloud Computing',
   Frontend = 'Front-end',
   Backend = 'Back-end',
@@ -105,7 +105,7 @@ export const skills: ISkillList = {
   styledComponents: {
     name: 'Styled Components',
     yearsOfXp: 1,
-    friendStatus: CareerFriends.GettingToKnow,
+    friendStatus: CareerFriends.BestFriends,
     category: TechnicalCategory.Frontend,
   },
   gatsby: {
@@ -128,7 +128,7 @@ export const skills: ISkillList = {
   },
   machineLearning: {
     name: 'Machine Learning',
-    yearsOfXp: 0,
+    yearsOfXp: 1,
     friendStatus: CareerFriends.GettingToKnow,
     category: TechnicalCategory.Backend,
   },
@@ -137,18 +137,21 @@ export const skills: ISkillList = {
     yearsOfXp: 10,
     friendStatus: CareerFriends.BestFriends,
     category: TechnicalCategory.FullStack,
+    display: false,
   },
   cli: {
     name: 'CLI in Unix-like Environments',
     yearsOfXp: 11,
     friendStatus: CareerFriends.BestFriends,
     category: TechnicalCategory.FullStack,
+    display: false,
   },
   git: {
     name: 'git',
     yearsOfXp: 9,
     friendStatus: CareerFriends.BestFriends,
     category: TechnicalCategory.FullStack,
+    display: false,
   },
   ruby: {
     name: 'Ruby',
@@ -184,7 +187,7 @@ export const skills: ISkillList = {
     category: TechnicalCategory.FullStack,
   },
   flex: {
-    name: 'Adobe Flex / ActionScript 3.0',
+    name: 'ActionScript 3.0',
     yearsOfXp: 5,
     friendStatus: CareerFriends.OldFriends,
     category: TechnicalCategory.Frontend,
