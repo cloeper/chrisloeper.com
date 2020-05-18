@@ -10,7 +10,7 @@ export interface IJobData {
     state: string;
   };
   workData: string[];
-  skillsUsed?: ISkill[];
+  skillsUsed: ISkill[];
 }
 
 interface IEmploymentDate {
@@ -30,9 +30,11 @@ export const jobHistory: IJobData[] = [
     },
     workData: [
       'Lead a team to create a greenfield application that incorporated a headless CMS to generate static content.',
+      'Project was built using a modern react ecosystem.',
+      'We used TypeScript to ensure long term stability and maintainability of code.',
       'Sadly, a large portion of the company was laid off due to COVID-19.',
     ],
-    skillsUsed: [skills.react, skills.redux, skills.styledComponents, skills.aws, skills.gatsby, skills.reactTestingLib],
+    skillsUsed: [skills.react, skills.redux, skills.styledComponents, skills.aws, skills.gatsby, skills.reactTestingLib, skills.typeScript, skills.jest, skills.yarn],
   },
   {
     company: 'DealSite',
@@ -49,6 +51,7 @@ export const jobHistory: IJobData[] = [
       'Implemented complex, security-focused customer login using oauth in conjunction with bespoke legacy identity security systems.',
       'Company ran into financial issues in November, couldn’t afford to pay me anymore.',
     ],
+    skillsUsed: [skills.javascript, skills.react, skills.redux, skills.reduxSaga, skills.reactTestingLib, skills.immutable, skills.typeScript, skills.jest, skills.yarn],
   },
   {
     company: 'OpenGov',
@@ -67,6 +70,7 @@ export const jobHistory: IJobData[] = [
       'Owned and led the technical creation of a robust component library, personally contributing major components like a flexible and extensible Table, Date Input, Wizard, Tab, etc, while also leading a small team to further build out the library.',
       'Tight communication and collaboration with the product and design teams throughout my time at OpenGov, helping to improve integration, communication, and process between all parties.',
     ],
+    skillsUsed: [skills.javascript, skills.react, skills.redux, skills.enzyme, skills.typeScript, skills.immutable, skills.cssModules, skills.jest, skills.yarn],
   },
   {
     company: 'Marketo',
@@ -83,6 +87,7 @@ export const jobHistory: IJobData[] = [
       'Tasked with leading the team to rebuild marketo.com from the ground up using modern javascript libraries and frameworks.',
       'Extensive use of React, Redux, React Motion, React Drag and Drop, Reselect, Enzyme, all using ES6/7 syntax and features.',
     ],
+    skillsUsed: [skills.javascript, skills.react, skills.redux, skills.enzyme, skills.immutable, skills.cssModules, skills.jest, skills.yarn],
   },
   {
     company: 'Janrain',
@@ -98,6 +103,7 @@ export const jobHistory: IJobData[] = [
       'Wrote tooling to assist in configurations in Python. Acted as Team Lead of the Application Development team for 9 months in 2014. Promoted to Project Lead in 2014.',
       'Developed UI using Angular as well as RESTful(ish) APIs using Python, Flask, to further ease customer configurations.',
     ],
+    skillsUsed: [skills.javascript, skills.json, skills.node, skills.python],
   },
   {
     company: 'Thetus',
@@ -113,17 +119,19 @@ export const jobHistory: IJobData[] = [
       'Key developer for critical components of the platform.',
       'Lead interviews.',
     ],
+    skillsUsed: [skills.flex],
   },
   {
     company: 'American Virtual Academy',
     startDate: { month: 'August', year: 2010 },
-    endDate: { month: 'December', year: 2011 },
-    title: '',
+    endDate: { month: 'January', year: 2011 },
+    title: 'Front-end Engineer',
     location: {
       city: 'Chandler',
       state: 'AZ',
     },
     workData: ['Helped create parent-student portal, course builder, and course manager software modules used in online school software.'],
+    skillsUsed: [skills.cSharp],
   },
   {
     company: 'Colyar Consulting Group',
@@ -135,6 +143,7 @@ export const jobHistory: IJobData[] = [
       state: 'OR',
     },
     workData: ['Created software used by state agencies for child lunch programs.'],
+    skillsUsed: [skills.cSharp],
   },
   {
     company: 'Unicorn Media',
@@ -150,6 +159,7 @@ export const jobHistory: IJobData[] = [
       'Developed mission-critical website to make company viable.',
       'Designed entire system architecture and was deeply involved in UX.',
     ],
+    skillsUsed: [skills.cSharp, skills.flex],
   },
   {
     company: 'Exodus Web',
@@ -161,6 +171,7 @@ export const jobHistory: IJobData[] = [
       state: 'OR',
     },
     workData: ['Created websites for clients of all varieties from spas to large companies.', 'Handled credit and PayPal transactions.'],
+    skillsUsed: [skills.cSharp],
   },
   {
     company: 'CCBill.com',
@@ -175,12 +186,13 @@ export const jobHistory: IJobData[] = [
       'Full-stack development in Perl and C#.',
       'Enabled company to branch into other products in addition to billing software and engineered expansion into DRM system for existing clients.',
     ],
+    skillsUsed: [skills.cSharp, skills.perl],
   },
   {
     company: 'Intrepid Data Management',
     startDate: { month: 'September', year: 2004 },
     endDate: { month: 'June', year: 2006 },
-    title: '',
+    title: 'Software Developer',
     location: {
       city: 'Portland',
       state: 'OR',
@@ -189,5 +201,6 @@ export const jobHistory: IJobData[] = [
       'Designed, developed, and maintained important national study medical research database used by top-tier universities.',
       'Major contributor to software architecture.',
     ],
+    skillsUsed: [skills.perl],
   },
 ];

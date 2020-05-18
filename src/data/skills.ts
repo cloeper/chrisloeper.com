@@ -1,13 +1,13 @@
-enum CareerFriends {
+export enum CareerFriends {
   BestFriends = 'Best Friends',
   OldFriends = 'Old Friends',
   GettingToKnow = 'Getting to Know',
 }
 
-enum TechnicalCategory {
+export enum TechnicalCategory {
   Cloud = 'Cloud Computing',
-  Frontend = 'Frontend',
-  Backend = 'Backend',
+  Frontend = 'Front-end',
+  Backend = 'Back-end',
   FullStack = 'Full Stack',
 }
 
@@ -16,6 +16,7 @@ export interface ISkill {
   yearsOfXp: number;
   friendStatus: CareerFriends;
   category: TechnicalCategory;
+  display?: boolean;
 }
 
 interface ISkillList {
@@ -104,7 +105,7 @@ export const skills: ISkillList = {
   styledComponents: {
     name: 'Styled Components',
     yearsOfXp: 1,
-    friendStatus: CareerFriends.GettingToKnow,
+    friendStatus: CareerFriends.BestFriends,
     category: TechnicalCategory.Frontend,
   },
   gatsby: {
@@ -127,7 +128,7 @@ export const skills: ISkillList = {
   },
   machineLearning: {
     name: 'Machine Learning',
-    yearsOfXp: 0,
+    yearsOfXp: 1,
     friendStatus: CareerFriends.GettingToKnow,
     category: TechnicalCategory.Backend,
   },
@@ -136,30 +137,35 @@ export const skills: ISkillList = {
     yearsOfXp: 10,
     friendStatus: CareerFriends.BestFriends,
     category: TechnicalCategory.FullStack,
+    display: false,
   },
   cli: {
     name: 'CLI in Unix-like Environments',
     yearsOfXp: 11,
     friendStatus: CareerFriends.BestFriends,
     category: TechnicalCategory.FullStack,
+    display: false,
   },
   git: {
     name: 'git',
     yearsOfXp: 9,
     friendStatus: CareerFriends.BestFriends,
     category: TechnicalCategory.FullStack,
+    display: false,
   },
   ruby: {
     name: 'Ruby',
     yearsOfXp: 2,
     friendStatus: CareerFriends.OldFriends,
     category: TechnicalCategory.Backend,
+    display: false,
   },
   rails: {
     name: 'Ruby on Rails',
     yearsOfXp: 2,
     friendStatus: CareerFriends.OldFriends,
     category: TechnicalCategory.FullStack,
+    display: false,
   },
   cSharp: {
     name: 'C# / .net',
@@ -172,6 +178,7 @@ export const skills: ISkillList = {
     yearsOfXp: 1,
     friendStatus: CareerFriends.OldFriends,
     category: TechnicalCategory.FullStack,
+    display: false,
   },
   perl: {
     name: 'Perl',
@@ -180,7 +187,7 @@ export const skills: ISkillList = {
     category: TechnicalCategory.FullStack,
   },
   flex: {
-    name: 'Adobe Flex / ActionScript 3.0',
+    name: 'ActionScript 3.0',
     yearsOfXp: 5,
     friendStatus: CareerFriends.OldFriends,
     category: TechnicalCategory.Frontend,

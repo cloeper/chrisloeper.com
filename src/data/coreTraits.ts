@@ -7,10 +7,11 @@ export const coreTraits: string[] = [
   'Good Listener',
   'Adaptable',
   'Self Motivated',
-  'Forward Thinking',
-  'Social',
   'Big Picture Focused',
   'Data Driven',
   'Results Driven',
-  'Quick Study',
 ];
+
+// 'Forward Thinking',
+// 'Social',
+// 'Quick Study',
